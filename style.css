@@ -1,6 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 62.5%;                                   /* mengubah rem unit skala 10 */
+    --fs-xl: clamp(4rem, 4vw + 0.5rem, 6rem);           
+    --fs-l: clamp(1.4rem, 2vw + 0.5rem, 2.5rem);
+    --fs-s: clamp(1.4rem, 1.4vw + 0.5rem, 2.4rem);
+
+    --color-primary: #006989;
+    --color-secondary: #F3F7EC;
+
+    --ff: 'monserrat', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--color-secondary);
+    font-family: 'montserrat', sans-serif;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 4rem;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    z-index: 1;
+}
+
+#header .logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .logo-img #header-img{
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 1rem;
+}
+
+#header .logo-img span {
+    color: var(--color-primary);
+    font-size: var(--fs-l);
+    font-weight: 600;
+} 
+
+#header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header nav .nav-link {
+    color: var(--color-primary);
+    font-size: var(--fs-l);
+    padding: 0.8rem;
+    margin: 0 1rem;
+    transition: 0.2s ease;
+}
+
+#header nav .nav-link:hover {
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+.hero {
+    padding: 18vh 5vw 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero .text-hero {
+    width: 100%;
+    padding: 0 5vw;
+}
+
+.hero .text-hero .details {
+    margin: 3vh 0;
+}
+
+.hero .text-hero h2 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.hero .text-hero p {
+    font-size: var(--fs-s);
+}
+
+.hero .text-hero .btn-details {
+    background: transparent;
+    border: 4px solid var(--color-primary);
+    border-radius: 3px;
+    padding: 1.5vh 3vw;
+    font-size: var(--fs-l);
+    color: var(--color-primary);
+    transition: 0.3s;
+    font-family: var(--ff);
+    margin-top: 4vh;
+}
+
+.hero .text-hero .btn-details:hover {
+    color: var(--color-secondary);
+    background: var(--color-primary);
+}
+
+.hero .video-hero {
+    width: 100%;
+}
+
+.hero .video-hero #video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
