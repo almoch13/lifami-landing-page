@@ -14,9 +14,9 @@ html {
 
 :root {
     font-size: 62.5%;                                   /* mengubah rem unit skala 10 */
-    --fs-xl: clamp(4rem, 4vw + 0.5rem, 6rem);           
-    --fs-l: clamp(1.6rem, 2vw + 0.5rem, 2.5rem);
-    --fs-s: clamp(1.4rem, 1.4vw + 0.5rem, 2.4rem);
+    --fs-xl: clamp(4rem, 4vw + 0.5rem, 8rem);           
+    --fs-l: clamp(1.6rem, 2vw + 0.5rem, 3.5rem);
+    --fs-s: clamp(1.4rem, 1.4vw + 0.5rem, 3.4rem);
 
     --color-primary: #006989;
     --color-secondary: #F3F7EC;
@@ -173,7 +173,55 @@ body {
 
 .about .card-container .card p {
     text-align: left;
+    font-size: var(--fs-s);
 }
+
+.about .card-container .card .icon {
+    width: 10vh;
+    height: auto;
+}
+
+.contact {
+    padding: 7rem 5rem;
+}
+
+.contact header {
+    text-align: center;
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.contact form {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.contact form label {
+    font-size: var(--fs-s);
+    color: var(--color-primary);
+}
+
+.contact form .input-data {
+    width: 100%;
+    padding: 3vh;
+    margin: 0.3rem 0 1.2rem 0;
+    display: inline-block;
+    border: none;
+    background: #dddddd;
+    font-size: var(--fs-s);
+    font-family: 'montserrat', sans-serif;
+}
+
+input[type=submit] {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'montserrat', sans-serif;
+  }
 
 /* Tablet Mode */
 @media only screen and (max-width: 920px) {
@@ -197,6 +245,10 @@ body {
     
     .about .card-container {
         flex-wrap: wrap;
+    }
+
+    .contact form {
+        width: 100%;
     }
 }
 
